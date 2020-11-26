@@ -1,10 +1,21 @@
 {
   "name": "squarecontent",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/src/main.js",
   "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/src/main.js",
+    "test": "jest --watchAll"
+  },
   "devDependencies": {
+    "@types/node": "^14.14.10",
     "jest": "^26.6.3",
-    "supertest": "^6.0.1"
+    "nodemon": "^2.0.6",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
   }
 }
